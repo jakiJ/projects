@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/normalize.css">
+    <link rel="stylesheet" href="../zoos.css">
+    <title>online-zoo</title>
+</head>
+<body>
+    <div class="cover hidden"></div>
+    <div class="hidden main-pop-up">
+        <button class="close-pop-up"></button>
+        <img src="../../../assets/images/shakehands.jpg" alt="Shake hands animal adn human">
+        <h3 class="pop-up-title">together we care, save and protect!</h3>
+        <p class="pop-up-description">
+            Your most generous gift not only cares for countless animals,
+            but it also offers hope and a vital lifeline to the world’s most
+            endangered wildlife relying on us to survive.
+        </p>
+        <div class="set-button">
+            <button class="btn-pop-up btn-amount-main" data-amount="20">$20</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="30">$30</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="50">$50</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="80">$80</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="100">$100</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="0">other amount</button>
+         </div>
+    </div>
+    <!-- FIRST -->
+    <div class="make-donation pop-up-slide-first">
+        <div class="header-pop-up"><h4>make your donation</h4></div>
+        <div class="information">Donation Information:</div>
+        <div class="donation-information">
+            <label><span class="starts">*</span>Choose your donation amount:
+                <div class="set-button">
+                    <button class="hidden"></button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="10">$10</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="20">$20</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="30">$30</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="50">$50</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="80">$80</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="100">$100</button>
+                </div>
+            </label>
+             <div class="block-amount">
+                <button class="btn-pop-up">other amount</button>
+                <input type="number" class="donation-amount">
+             </div>
+             <div>
+                <button class="btn-pop-up">for special pet</button>
+                <select name="pets" id="pets" class="set-animal" selected="Choose your favourite">
+                    <option value=""></option>
+                    <option value="Panda">Lukas the Panda</option>
+                    <option value="Lemur">Andy the Lemur</option>
+                    <option value="Gorrila">Glen the Gorilla</option>
+                    <option value="Alligator">Mike the Alligator</option>
+                    <option value="Eagles">Sam & Lora the eagles family</option>
+                    <option value="Koala">Liz the Koala</option>
+                    <option value="Lion">Shake the Lion</option>
+                    <option value="Tiger">Senja the Tiger</option>
+                </select>
+             </div>
+
+
+             <label for="monthly-check" class="lable-monthly-check">
+                <input type="checkbox" id="monthly-check" name="monthly-check" value="yes" class="monthly-check">
+                Make this a monthly recurring gift
+            </label>
+
+            <div class="control-panel">
+                <div class="counter-pages">
+                    <div class="active-count"></div>
+                    <div class="non-active-count"></div>
+                    <div class="non-active-count"></div>
+                </div>
+                <button type="button" class="btn-pop-up first-next">Next
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- SECOND -->
+    <div class="make-donation pop-up-slide-second">
+        <div class="header-pop-up"><h4>make your donation</h4></div>
+        <div class="information">Billing Information:</div>
+        <form action="" class="person-information">
+            <label for="name"><span class="starts">*</span> Your Name <br>
+                <input type="text" id="name" required class="input person-name">
+            </label>
+
+            <label for="email"><span class="starts">*</span> Your Email Address <br>
+                <input type="email" id="email" required class="input person-email">
+                <p>
+                    You will receive emails from the Online Zoo, including updates and news
+                    on the latest discoveries and translations. You can unsubscribe at any time.
+                </p>
+            </label>
+
+            <div class="control-panel">
+                <div class="counter-pages">
+                    <div class="active-count"></div>
+                    <div class="active-count"></div>
+                    <div class="non-active-count"></div>
+                </div>
+                <button type="button" class="first-back btn-back">Back</button>
+                <button type="button" class="btn-pop-up second-next">Next</button>
+            </div>
+        </form>
+    </div>
+    <!-- THIRD -->
+    <div class="make-donation pop-up-slide-third">
+            <div class="header-pop-up"><h4>make your donation</h4></div>
+            <div class="information">Payment Information:</div>
+            <form action="" class="payment-information">
+                <div class="card-info">
+                    <label for="card-number"><span class="starts">*</span> Credit Card Number<br>
+                        <input type="number" class="card-number" id="card-number">
+                    </label>
+                    <label for="cvv-number"><span class="starts">*</span> CVV Number<br>
+                        <input type="number" class="cvv-number" id="cvv-number">
+                    </label>
+                </div>
+                <div class="date-info">
+                    <label for="date-card"><span class="starts">*</span> Expiration Date<br>
+                        <select name="month" id="date-month">
+                            <option value="Month" selected disabled>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="year" id="date-year">
+                            <option value="Year" selected disabled>Year</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </label>
+                </div>
+
+
+                <div class="control-panel">
+                    <div class="counter-pages">
+                        <div class="active-count"></div>
+                        <div class="active-count"></div>
+                        <div class="active-count"></div>
+                    </div>
+                    <button type="button" class="btn-back second-back">Back</button>
+                    <button type="button" class="complete-donate">complete donation</button>
+                </div>
+            </form>
+    </div>
+    <header class="header_online-zoo">
+        <h1>Online Zoo</h1>
+        <div class="conteiner_size">
+
+            <div class="header_content">
+                <a href="../../../index.html">
+                    <div class="online-zoo_logo">
+                        <img src="../../../assets/icons/Logo_black.svg" alt="logo_online-zoo">
+                    </div>
+                </a>
+
+                <nav class="header_navigation">
+                    <ul class="online-zoo_pages-nav">
+                        <li><a href="../../../index.html" class="nav-link">about</a></li>
+                        <li><a href="../../map/map.html" class="nav-link">map</a></li>
+                        <li><a href="" class="nav-link-active">zoos</a></li>
+                        <li><a href="../../contactus/contuctus.html" class="nav-link">contact us</a></li>
+                        <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project" class="nav-link">design</a></li>
+
+                    </ul>
+
+                    <ul class="online-zoo_social-nav">
+                        <li  class="icons_social"><a href="https://www.youtube.com/" class="youtube" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://www.instagram.com/" class="instagram" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://ru-ru.facebook.com/" class="facebook" target="_blank"></a></li>
+                    </ul>
+                </nav>
+
+                <button class="burger-menu-btn"></button>
+
+                <nav class="burger-menu">
+                    <button class="burger-menu-btn-close"></button>
+                    <ul class="burger-menu_pages-nav">
+                        <li><a href="../../../index.html" class="burger-nav-link">about</a></li>
+                        <li><a href="../../map/map.html" class="burger-nav-link">map</a></li>
+                        <li><a href="" class="burger-nav-link-active">zoos</a></li>
+                        <li><a href="../../contactus/contuctus.html" class="burger-nav-link">contact us</a></li>
+                    <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project" class="burger-nav-link">design</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <article class="live-cam">
+            <div class="conteiner_size conteiner_size-live-cam">
+                <article class="aside-wrapper">
+                    <aside class="side-menu">
+
+                        <div class="side-item first">
+                            <div class="icon-live">
+                                live
+                                <img src="../assets/icons/cam.svg" alt="camera">
+                            </div>
+
+                            <button class="open-side-btn">
+                                <img src="../assets/icons/arrow_open.svg" alt="">
+                            </button>
+                            <button class="close-side-btn">
+                                <img src="../assets/icons/arrow_close.svg" alt="">
+                            </button>
+
+                        </div>
+
+                        <div class="inside-wrapper">
+
+                            <div class="inside-item main-aside-block" style="order: 0;">
+                                    <div class="active-page without-description">
+                                        <img src="../assets/icons/Gorilla.svg" alt="Gorilla">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Gorilla_full-white.svg" alt="Gorilla">
+                                        <p>
+                                            Livestream from Gorilla Forest Corridor habitat cam
+                                        </p>
+                                    </div>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 1;">
+                                <a href="../lemurs/lemurs.html">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Lemur.svg" alt="Lemur">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Lemur_full-orange.svg" alt="Lemur">
+                                        <p>
+                                            The ring-tailed lemurs play in Madagascar, Lemuria Land
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 2;">
+                                <a href="../panda/panda.html">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Panda.svg" alt="Panda">
+                                    </div>
+                                    <div class="active-animal-block with-description">
+                                        <img src="../assets/icons/Panda_full-orange.svg" alt="Panda">
+                                        <p>
+                                            Watch live from China's  Panda Center
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 3;">
+                                <a href="../eagles/eagles.html">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Eagle.svg" alt="Eagles">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Eagle_full-orange.svg" alt="Eagles">
+                                        <p>
+                                            Watch The Bald Eagles Nest from West End cam
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 4;">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/tiger.svg" alt="Tiger">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/tiger_full-orange.svg" alt="Tiger">
+                                        <p>
+                                            The ring-tailed lemurs play in Madagascar, Lemuria Land
+                                        </p>
+                                    </div>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 5;">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Lion.svg" alt="Lion">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Lion_full-orange.svg" alt="Lion">
+                                        <p>
+                                            The ring-tailed lemurs play in Madagascar, Lemuria Land
+                                        </p>
+                                    </div>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 6;">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Alligator.svg" alt="Alligator">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Alligator_full-orange.svg" alt="Alligator">
+                                        <p>
+                                            The ring-tailed lemurs play in Madagascar, Lemuria Land
+                                        </p>
+                                    </div>
+                            </div>
+
+                            <div class="inside-item main-aside-block" style="order: 7;">
+                                    <div class="none-active-page without-description">
+                                        <img src="../assets/icons/Coala.svg" alt="Coala">
+                                    </div>
+                                    <div class="none-active-animal-block with-description">
+                                        <img src="../assets/icons/Coala_full-orange.svg" alt="Coala">
+                                        <p>
+                                            The ring-tailed lemurs play in Madagascar, Lemuria Land
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="side-item last">
+                            <button class="more-side-btn">
+                                <img src="../assets/icons/arrow-more.svg" alt="" class="more">
+                            </button>
+                        </div>
+
+                    </aside>
+                    <aside class="side-menu-adaptive">
+
+                        <div class="side-item first">
+
+                            <button class="open-side-btn">
+                                <img src="../assets/icons/arrow_open.svg" alt="">
+                            </button>
+
+                        </div>
+
+                        <div class="inside-item">
+                            <img src="../assets/icons/Gorilla_white.svg" alt="Gorilla">
+                        </div>
+
+                        <div class="inside-item none-active">
+                            <a href="../lemurs/lemurs.html">
+                                <img src="../assets/icons/Lemur_orange.svg" alt="Lemur">
+                            </a>
+                        </div>
+
+                        <div class="inside-item none-active">
+                            <a href="../panda/panda.html">
+                                <img src="../assets/icons/Panda_orange.svg" alt="Panda">
+                            </a>
+                        </div>
+
+                        <div class="inside-item none-active">
+                            <a href="../eagles/eagles.html">
+                                <img src="../assets/icons/Eagle_orange.svg" alt="Eagles">
+                            </a>
+                        </div>
+
+                        <div class="side-item last">
+                            <button class="more-side-btn">
+                                <img src="../assets/icons/arrow-more.svg" alt="">
+                            </button>
+                        </div>
+
+                    </aside>
+                </article>
+                <div class="live-cam_main-blok">
+
+                    <button class="btn_donation btn-donate">
+                        donate now
+                        <a href=""></a>
+                        <img src="../../../assets/icons/arrow_next.svg" alt="arrow">
+                    </button>
+
+                    <h3>
+                        gorillas cams
+                    </h3>
+
+                    <div class="movie-from-youtube">
+                        <div class="plug-on-video"></div>
+                        <iframe class="main-iframe-video" id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                    </div>
+
+
+                    <div class="live-cam-slider">
+                        <h4>
+                            more live views
+                        </h4>
+
+                        <div class="slide-conteiner">
+                            <button class="btn-slider-move btn-back-movie">
+                                <img src="../../../assets/icons/arrow_back_black.svg" alt="">
+                            </button>
+
+                            <div class="movie-conteiner-wrapper">
+                                <div class="movie-conteiner" style="order: 0;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <img src="../assets/icons/cam1.svg" alt="">
+                                </div>
+                                <div class="movie-conteiner" style="order: 1;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/3T0z1CT-nR8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                    <img src="../assets/icons/cam2.svg" alt="">
+                                </div>
+                                <div class="movie-conteiner" style="order: 2;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <img src="../assets/icons/cam3.svg" alt="">
+                                </div>
+                                <div class="movie-conteiner" style="order: 3;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/3T0z1CT-nR8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                    <img src="../assets/icons/cam1.svg" alt="">
+                                </div>
+                                <div class="movie-conteiner" style="order: 4;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <img src="../assets/icons/cam2.svg" alt="">
+                                </div>
+                                <div class="movie-conteiner" style="order: 5;">
+                                    <div class="plug-on-video"></div>
+                                    <iframe id="iframe-video" src="https://www.youtube.com/embed/3T0z1CT-nR8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- <iframe id="iframe-video" src="https://www.youtube.com/embed/rgXWDk7rh4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                    <img src="../assets/icons/cam3.svg" alt="">
+                                </div>
+                            </div>
+
+                            <button  class="btn-slider-move btn-forward">
+                                <img src="../../../assets/icons/arrow_next_black.svg" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+        <article class="online-zoo_quick-donation">
+            <div class="conteiner_size">
+                <div class="quick-donation_content">
+
+                    <div class="quick-donation_content-description">
+                        <h4>
+                            make a difference for the gorillas!
+                        </h4>
+
+                        <p class="gorillas">
+                            It is our goal to ensure the conservation and restoration of the gorilla population and their habitat in
+                            Central Africa. To do this, we need your help! Bring your food charity straight to Glen and his family.
+                        </p>
+
+                    </div>
+
+                    <div class="quick-donation_content-form">
+                        <label for="donate" id="label-donate">
+                            Quick Donate
+                        </label>
+
+                        <form action="" method="POST" enctype="multipart/form-data" class="quick-donation_content-form-sent">
+                            <span>$</span>
+                            <input max="9999" type="number" name="donate_name" id="donate" placeholder="Donation Amount" class="input_donation">
+                            <button class="bnt_donation_sent" type="button">
+                                <img src="../../../assets/icons/arrow.svg" alt="arrow">
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+
+        <article class="did-you-know">
+            <div class="conteiner_size">
+                <div class="did-you-now_main-block gorillas">
+                    <section class="did-you-know_title">
+                        <h4>did you know?</h4>
+                        <p>
+
+                            In addition to having distinctive fingerprints like humans do, gorillas
+                            also have unique nose prints. Gorillas are the largest of the great
+                            apes, but the western lowland gorilla is the smallest of the
+                            subspecies.
+                        </p>
+                    </section>
+
+                    <section class="did-you-know_description">
+                        <div class="description_block1">
+
+                            <div class="block1_content">
+                                <div class="list_description gorillas">
+                                    <p><span>Common name:</span>Western lowland gorillas</p>
+                                    <p><span>Scientific name:</span>Gorilla gorilla gorilla</p>
+                                    <p><span>Type:</span>Mammals</p>
+                                    <p><span>Size:</span>Standing height, four to six feet</p>
+                                    <p><span>Diet:</span>Omnivore</p>
+                                    <p><span>Habitat:</span>Rainforests</p>
+                                    <p><span>Range:</span>Western Africa
+                                        <a href="../../map/map.html">
+                                            <button class="view_live_cam-btn">
+                                                view map
+                                                <div class="view_live_cam-btn-img"></div>
+                                            </button>
+                                        </a>
+                                    </p>
+                                </div>
+                                <!-- <a href="../../map/map.html" class="btn_map">
+                                    view map
+                                    <img src="../../../assets/icons/arrow_next-or.svg" alt="arrow" class="btn_img">
+                                </a> -->
+                                <!-- <button class="view_live_cam-btn">
+                                    view map
+                                    <img src="./assets/icons/arrow_next-or.svg" alt="arrow" class="view_live_cam-btn-img">
+                                </button> -->
+                            </div>
+
+                            <div class="block1_img gorillas">
+
+                            </div>
+                        </div>
+
+                        <div class="description_block2">
+                            Western lowland gorillas are the smallest of the four subspecies. They live in thick tropical rainforests, where they find plenty of
+                            food for their vegetarian diet. They eat roots, shoots, fruit, wild celery, and tree bark and pulp. Gorillas can climb trees, but they’re
+                            usually found on the ground in communities—known as troops. Troops are led by one dominant, older adult male, often called
+                            a silverback because of the swath of silver hair that adorns his otherwise dark fur. Troops also include several other young males,
+                            some females, and their offspring. The leader organizes troop activities, such as eating, nesting in leaves, and moving about the
+                            group's home range. Gorillas prefer traveling on all fours, pushing themselves forward with their knuckles and soles of their feet.
+                            Female gorillas give birth to one infant after a pregnancy of nearly nine months. These infants ride on their mothers’ backs from
+                            the age of four months through the first two or three years of their lives.
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer_online-zoo">
+        <div class="conteiner_size">
+            <div class="footer_content">
+                <div class="footer_content_block-1">
+                    <div class="logos-courses">
+                        <div class="online-zoo_logo">
+                            <a href="../../../index.html"><img src="../../../assets/icons/Logo_white.svg" alt="logo_online-zoo"></a>
+                        </div>
+
+                        <div class="online-zoo_logo" title="Yem Digita">
+                            <img src="../../../assets/icons/Yem_Digital.svg" alt="logo_yem_digital">
+                        </div>
+
+                        <div class="online-zoo_logo" title="Rolling Scopes School">
+                            <img src="../../../assets/icons/rs_school_js_logo.svg" alt="logo_RSS">
+                        </div>
+                    </div>
+
+                    <ul class="online-zoo_pages-nav_footer">
+                        <li><a href="../../../index.html" class="nav-link">about</a></li>
+                        <li><a href="../../map/map.html" class="nav-link">map</a></li>
+                        <li><a href="" class="nav-link">zoos</a></li>
+                        <li><a href="../../contactus/contuctus.html" class="nav-link">contact us</a></li>
+                    </ul>
+
+                    <button class="online-zoo_button btn-donate">
+                        <span>donate for volunteers</span>
+                        <img class="img_arrow" src="../../../assets/icons/arrow_next.svg" alt="arrow" class="meet-pets_btn-choose-arrow">
+                    </button>
+
+                </div>
+
+                <div class="footer_content_block-2">
+                    <ul class="footer_link_creator">
+                        <li>© 2021 DinaK </li>
+                        <li>© Yem Digital </li>
+                        <li>© RSSchool</li>
+                    </ul>
+
+                    <ul class="online-zoo_social-nav">
+                        <li  class="icons_social"><a href="https://www.youtube.com/" class="youtube" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://www.instagram.com/" class="instagram" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://ru-ru.facebook.com/" class="facebook" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../script.js"></script>
+    <script src="../zoos.js"></script>
+</body>
+</html>

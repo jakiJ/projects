@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>online-zoo</title>
+</head>
+<body>
+    <div class="cover hidden"></div>
+    <div class="hidden main-pop-up">
+        <button class="close-pop-up"></button>
+        <img src="./assets/images/shakehands.jpg" alt="Shake hands animal adn human">
+        <h3 class="pop-up-title">together we care, save and protect!</h3>
+        <p class="pop-up-description">
+            Your most generous gift not only cares for countless animals,
+            but it also offers hope and a vital lifeline to the world’s most
+            endangered wildlife relying on us to survive.
+        </p>
+        <div class="set-button">
+            <button class="btn-pop-up btn-amount-main" data-amount="20">$20</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="30">$30</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="50">$50</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="80">$80</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="100">$100</button>
+            <button class="btn-pop-up btn-amount-main" data-amount="0">other amount</button>
+         </div>
+    </div>
+    <!-- FIRST -->
+    <div class="make-donation pop-up-slide-first">
+        <div class="header-pop-up"><h4>make your donation</h4></div>
+        <div class="information">Donation Information:</div>
+        <div class="donation-information">
+            <label><span class="starts">*</span>Choose your donation amount:
+                <div class="set-button">
+                    <button class="hidden"></button>
+                    <button class="btn-pop-up btn-amount-other btn-amount-other-ten" data-amount="10">$10</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="20">$20</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="30">$30</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="50">$50</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="80">$80</button>
+                    <button class="btn-pop-up btn-amount-other" data-amount="100">$100</button>
+                </div>
+            </label>
+             <div class="block-amount">
+                <button class="btn-pop-up">other amount</button>
+                <input type="number" class="donation-amount">
+             </div>
+             <div>
+                <button class="btn-pop-up">for special pet</button>
+                <select name="pets" id="pets" class="set-animal" selected="Choose your favourite">
+                    <option value=""></option>
+                    <option value="Panda">Lukas the Panda</option>
+                    <option value="Lemur">Andy the Lemur</option>
+                    <option value="Gorrila">Glen the Gorilla</option>
+                    <option value="Alligator">Mike the Alligator</option>
+                    <option value="Eagles">Sam & Lora the eagles family</option>
+                    <option value="Koala">Liz the Koala</option>
+                    <option value="Lion">Shake the Lion</option>
+                    <option value="Tiger">Senja the Tiger</option>
+                </select>
+             </div>
+
+
+             <label for="monthly-check" class="lable-monthly-check">
+                <input type="checkbox" id="monthly-check" name="monthly-check" value="yes" class="monthly-check">
+                Make this a monthly recurring gift
+            </label>
+
+            <div class="control-panel">
+                <div class="counter-pages">
+                    <div class="active-count"></div>
+                    <div class="non-active-count"></div>
+                    <div class="non-active-count"></div>
+                </div>
+                <button type="button" class="btn-pop-up first-next">Next
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- SECOND -->
+    <div class="make-donation pop-up-slide-second">
+        <div class="header-pop-up"><h4>make your donation</h4></div>
+        <div class="information">Billing Information:</div>
+        <form action="" class="person-information">
+            <label for="name"><span class="starts">*</span> Your Name <br>
+                <input type="text" id="name" required class="input person-name">
+            </label>
+
+            <label for="email"><span class="starts">*</span> Your Email Address <br>
+                <input type="email" id="email" required class="input person-email">
+                <p>
+                    You will receive emails from the Online Zoo, including updates and news
+                    on the latest discoveries and translations. You can unsubscribe at any time.
+                </p>
+            </label>
+
+            <div class="control-panel">
+                <div class="counter-pages">
+                    <div class="active-count"></div>
+                    <div class="active-count"></div>
+                    <div class="non-active-count"></div>
+                </div>
+                <button type="button" class="first-back btn-back">Back</button>
+                <button type="button" class="btn-pop-up second-next">Next</button>
+            </div>
+        </form>
+    </div>
+    <!-- THIRD -->
+    <div class="make-donation pop-up-slide-third">
+            <div class="header-pop-up"><h4>make your donation</h4></div>
+            <div class="information">Payment Information:</div>
+            <form action="" class="payment-information">
+                <div class="card-info">
+                    <label for="card-number"><span class="starts">*</span> Credit Card Number<br>
+                        <input type="number" class="card-number" id="card-number">
+                    </label>
+                    <label for="cvv-number"><span class="starts">*</span> CVV Number<br>
+                        <input type="number" class="cvv-number" id="cvv-number">
+                    </label>
+                </div>
+                <div class="date-info">
+                    <label for="date-card"><span class="starts">*</span> Expiration Date<br>
+                        <select name="month" id="date-month">
+                            <option value="Month" selected disabled>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="year" id="date-year">
+                            <option value="Year" selected disabled>Year</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </label>
+                </div>
+
+
+                <div class="control-panel">
+                    <div class="counter-pages">
+                        <div class="active-count"></div>
+                        <div class="active-count"></div>
+                        <div class="active-count"></div>
+                    </div>
+                    <button type="button" class="btn-back second-back">Back</button>
+                    <button type="button" class="complete-donate">complete donation</button>
+                </div>
+            </form>
+    </div>
+    <header class="header_online-zoo">
+        <h1>Online Zoo</h1>
+        <div class="conteiner_size">
+
+            <div class="header_content">
+
+                <div class="online-zoo_logo">
+                    <a href="./index.html"><img src="./assets/icons/Logo_black.svg" alt="logo_online-zoo"></a>
+                </div>
+
+                <nav class="header_navigation">
+                    <ul class="online-zoo_pages-nav">
+                        <li><a href="#About" class="nav-link-active">about</a></li>
+                        <li><a href="../online-zoo/pages/map/map.html" class="nav-link">map</a></li>
+                        <li><a href="../online-zoo/pages/zoos/panda/panda.html" class="nav-link">zoos</a></li>
+                        <li><a href="../online-zoo/pages/contactus/contuctus.html" class="nav-link">contact us</a></li>
+                        <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project" class="nav-link">design</a></li>
+                    </ul>
+
+                    <ul class="online-zoo_social-nav header">
+                        <li  class="icons_social"><a href="https://www.youtube.com/" class="youtube" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://www.instagram.com/" class="instagram" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://ru-ru.facebook.com/" class="facebook" target="_blank"></a></li>
+                    </ul>
+                </nav>
+
+                <button class="burger-menu-btn"></button>
+
+
+                <nav class="burger-menu">
+                    <button class="burger-menu-btn-close"></button>
+                    <ul class="burger-menu_pages-nav">
+                        <li><a href="#About" class="burger-nav-link-active">about</a></li>
+                        <li><a href="../online-zoo/pages/map/map.html" class="burger-nav-link">map</a></li>
+                        <li><a href="../online-zoo/pages/zoos/panda/panda.html" class="burger-nav-link">zoos</a></li>
+                        <li><a href="../online-zoo/pages/contactus/contuctus.html" class="burger-nav-link">contact us</a></li>
+                        <li><a href="https://www.figma.com/file/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project" class="burger-nav-link">design</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="watch-favorit-animal" id="About">
+            <div class="conteiner_size">
+                <div class="watch-favorit-animal_content">
+                    <h2 class="watch-favorit-animal_title">
+                        watch your favorite animal online
+                    </h2>
+
+                    <p class="watch-favorit-animal_prgf">
+                        Explore the exciting and mysterious world of wild
+                        animals in a natural setting without leaving your home.
+                    </p>
+
+                    <a href="./pages/zoos/panda/panda.html">
+                    <button class="btn_view-live-cam">
+                            VIEW LIVE CAM
+                            <img src="./assets/icons/arrow.svg" alt="arrow">
+                    </button>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="online-zoo_description">
+            <div class="conteiner_size">
+                <div class="online-zoo_description-content">
+
+                    <section class="online-zoo_description-content_block">
+
+                        <div class="block_title-descriprion">
+                            <h3 class="h3_title">
+                                Welcome to the Online Zoo!
+                            </h3>
+
+                            <p class="description">
+                                On our website, using live webcams, fans of all ages can
+                                observe various animals. Among them, are Giant pandas,
+                                eagles, alligators, forest gorillas, African lions, and others. It is
+                                the whole natural world in real-time in front of our cameras.
+                                We hope you will enjoy watching closely and explore animals’
+                                behavior and habitats! Note: animals are not always on view
+                                on cameras, so please check back if you don't see anything.
+                            </p>
+                        </div>
+
+                        <div class="image_description first"></div>
+
+                    </section>
+
+
+                    <section class="online-zoo_description-content_block how-we-work">
+
+                        <div class="image_description second"></div>
+
+                        <div class="block_title-descriprion">
+                            <h3 class="h3_title second">
+                                How we work
+                            </h3>
+
+                            <p class="description how-we-work">
+                                Online Zoo is a nonprofit committed to inspiring awareness
+                                and preservation of nature and wild animals in our zoo and
+                                worldwide. Every day, our experts work to safeguard the
+                                health and wellness of the animals. To continue these efforts,
+                                we need your help. We're so grateful to our numerous
+                                supporters. All donations, large and small, go a long way to
+                                the conservation efforts of our pets.
+                            </p>
+                        </div>
+
+                    </section>
+
+                </div>
+                <div class="description-content-adaptiv-320">
+                    <div class="block-welcome">
+                        <div class="description-image"></div>
+                        <h3 class="description-title">
+                            Welcome to the Online Zoo!
+                        </h3>
+                        <p class="description-description">
+                            On our website, using live
+                            webcams, fans of all ages can
+                            observe various animals. Among
+                            them, are Giant pandas, eagles,
+                            alligators, forest gorillas, African
+                            lions, and others. It is the whole
+                            natural world in real-time in
+                            front of our cameras.
+                        </p>
+                    </div>
+                    <div class="block-how">
+                        <div class="description-image"></div>
+                        <h3 class="description-title">
+                            How we work
+                        </h3>
+                        <p class="description-description">
+                            Online Zoo is a nonprofit
+                            committed to inspiring
+                            awareness and preservation of
+                            nature and wild animals in our
+                            zoo and worldwide. To continue
+                            these efforts, we need your help.
+                            We're so grateful to our
+                            supporters. All donations, large
+                            and small, go a long way to the
+                            conservation efforts of our pets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="online-zoo_quick-donation">
+            <div class="conteiner_size">
+                <div class="quick-donation_content">
+
+                    <div class="quick-donation_content-description">
+                        <h4>
+                            Your donation makes a difference!
+                        </h4>
+
+                        <p>
+                            The Online Zoo's animal webcams are some of the most famous on
+                            the internet. Tune in to watch your favourite animals — live, 24/7!
+                        </p>
+
+                    </div>
+
+                    <div class="quick-donation_content-form">
+                        <label for="donate" id="label-donate">
+                            Quick Donate
+                        </label>
+
+                        <!-- <div class="quick-donation_content-form-sent">
+                            <input type="number" name="donate_name" id="donate" placeholder="$ Donation Amount" class="input_donation">
+                            <button class="bnt_donation_sent">
+                                <img src="./assets/icons/arrow.svg" alt="arrow">
+                            </button>
+                        </div> -->
+
+                        <form action="" method="POST"  class="quick-donation_content-form-sent">
+                            <span>$</span>
+                            <input type="number" name="donate_name" id="donate" placeholder="Donation Amount" class="input_donation">
+                            <button class="bnt_donation_sent" type="button">
+                                <img src="./assets/icons/arrow.svg" alt="arrow">
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="online-zoo_meet-pets">
+            <div class="conteiner_size">
+                <div class="meet-pets_content">
+                    <h3>
+                        meet some our Pets
+                    </h3>
+
+                    <p class="meet-pets_description">
+                        Do you have a special place in your heart for animals? Who are your
+                        favorites? Perhaps you'd like to donate to special ones or all our pets?
+                        We think it's important for you to choose how your donation is used.
+                    </p>
+
+                    <div class="meet-pets__slider_btns">
+                        <button class="slider_button back" id="btn-back" type="button"></button>
+                        <button class="slider_button next" id="btn-next" type="button"></button>
+                    </div>
+
+                    <!-- карточки -->
+
+                    <div class="meet-pets_pets-items">
+
+                        <div class="card-of-item" style="order: 0;">
+                            <a href="./pages/zoos/panda/panda.html">
+
+                                <div class="name-of-animal">
+                                    Lucas
+                                </div>
+
+                                <img src="./assets/images/lucas.png" alt="Lucas" class="img-of-animal">
+
+                                <span class="class-of-animal">
+                                    Giant Panda
+                                </span>
+
+                                <p class="description-of-animal">
+                                    Native to central China, giant pandas
+                                    have come to symbolize vulnerable
+                                    species.
+                                </p>
+
+                                <button class="view_live_cam-btn">
+                                    VIEW LIVE CAM
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="card-of-item" style="order: 1;">
+                            <a href="./pages/zoos/lemurs/lemurs.html">
+                                <div class="name-of-animal">
+                                    Andy
+                                </div>
+
+                                <img src="./assets/images/andy.png" alt="Andy" class="img-of-animal">
+
+                                <span class="class-of-animal">
+                                    Madagascarian Lemur
+                                </span>
+
+                                <p class="description-of-animal">
+                                    Lemurs are considered the world’s
+                                    most endangered group of mammals.
+                                </p>
+
+                                <button class="view_live_cam-btn">
+                                    VIEW LIVE CAM
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </a>
+                         </div>
+
+                        <div class="card-of-item" style="order: 2;">
+                            <a href="./pages/zoos/gorillas/gorillas.html">
+                                <div class="name-of-animal">
+                                    Glen
+                                </div>
+
+                                <img src="./assets/images/glen.png" alt="Glen" class="img-of-animal">
+
+                                <span class="class-of-animal">
+                                    Gorilla in Congo
+                                </span>
+
+                                <p class="description-of-animal">
+                                    Variety of snacks very important for
+                                    the healthy life of gorillas and his
+                                    plenty of babies.
+                                </p>
+
+                                <button class="view_live_cam-btn">
+                                    VIEW LIVE CAM
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="card-of-item" style="order: 3;">
+                            <div class="name-of-animal">
+                                Mike
+                            </div>
+
+                            <img src="./assets/images/mike.png" alt="Mike" class="img-of-animal">
+
+                            <span class="class-of-animal">
+                                Chinese Alligator
+                            </span>
+
+                            <p class="description-of-animal">
+                                From nose to tail, belly to back,
+                                hard scales protect this petite
+                                alligator.
+                            </p>
+
+                            <button class="view_live_cam-btn">
+                                VIEW LIVE CAM
+                                <div class="view_live_cam-btn-img"></div>
+                            </button>
+                        </div>
+
+                        <div class="card-of-item" style="order: 4;">
+                            <a href="./pages/zoos/eagles/eagles.html">
+                                <div class="name-of-animal">
+                                    Sam & Lora
+                                </div>
+
+                                <img src="./assets/images/samandlora.png" alt="Sam & Lora" class="img-of-animal">
+
+                                <span class="class-of-animal">
+                                    West End Bald Eagles
+                                </span>
+
+                                <p class="description-of-animal">
+                                    Pair of eagle parents lay and protect
+                                    eggs, feed their chicks and teach them
+                                    to hunt and fly.
+                                </p>
+
+                                <button class="view_live_cam-btn">
+                                    VIEW LIVE CAM
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="card-of-item" style="order: 5;">
+                            <div class="name-of-animal">
+                                Liz
+                            </div>
+
+                            <img src="./assets/images/liz.png" alt="Liz" class="img-of-animal">
+
+                            <span class="class-of-animal">
+                                Australian Koala
+                            </span>
+
+                            <p class="description-of-animal">
+                                The elevated walkways bring you to
+                                eye level with the koalas as they perch
+                                in their forest.
+                            </p>
+
+                            <button class="view_live_cam-btn">
+                                VIEW LIVE CAM
+                                <div class="view_live_cam-btn-img"></div>
+                            </button>
+                        </div>
+
+                        <div class="card-of-item" style="order: 6;">
+                            <div class="name-of-animal">
+                                Shake
+                            </div>
+
+                            <img src="./assets/images/shake.png" alt="Shake" class="img-of-animal">
+
+                            <span class="class-of-animal">
+                                African Lion
+                            </span>
+
+                            <p class="description-of-animal">
+                                Lions roam the savannas and grasslands
+                                of Africa, hunting and raising cubs in the
+                                pride.
+                            </p>
+
+                            <button class="view_live_cam-btn">
+                                VIEW LIVE CAM
+                                <div class="view_live_cam-btn-img"></div>
+                            </button>
+                        </div>
+
+                        <div class="card-of-item" style="order: 7;">
+                            <div class="name-of-animal">
+                                Senja
+                            </div>
+
+                            <img src="./assets/images/CardTiger.jpg" alt="Senja" class="img-of-animal">
+
+                            <span class="class-of-animal">
+                                Sumatran
+                            </span>
+
+                            <p class="description-of-animal">
+                                Sumatran Tigers are the smallest of
+                                the five sub-species, and are found in
+                                Indonesia.
+                            </p>
+                            <button class="view_live_cam-btn">
+                                VIEW LIVE CAM
+                                <div class="view_live_cam-btn-img"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- конец карточек -->
+                    <a href="./pages/map/map.html">
+                    <button class="meet-pets_btn-choose">
+                            choose your favourite
+                            <div class="meet-pets_btn-choose-arrow"></div>
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="online-zoo__pay-and-feed">
+            <div class="conteiner_size">
+                <div class="pay-and-feed__content">
+
+                    <h3>PAY AND FEED</h3>
+
+                    <div class="pay-and-feed__block pay-and-feed__block-counter">
+                        <span class="pay-and-feed__counter">01</span>
+                        <div class="pay-and-feed__line"></div>
+                    </div>
+
+
+                    <div class="pay-and-feed__block pay-and-feed__block-content">
+                        <div class="pay-and-feed__image first"></div>
+
+                        <div class="pay-and-feed__item">
+
+                            <img src="./assets/icons/heart.svg" alt="Heart" class="pay-and-feed__item-img">
+
+                            <span class="pay-and-feed__item-span">Your donation has an impact</span>
+
+                            <p class="pay-and-feed__item-paragraf">
+                                Providing our animals with high-quality nutritious diets is just
+                                one element of animal care at our Zoo. We do all the best so
+                                that our animals can eat food similar to what they might find
+                                in their natural habitats while making sure they get the right
+                                mix of nutrients, proteins, and vitamins to be happy and
+                                healthy. Please help us provide nutritious food for our animals
+                                by donating. The generosity of people like you can help
+                                us make sure that our animals enjoy good food that keeps them
+                                in great condition.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="pay-and-feed__block pay-and-feed__block-counter">
+                        <span class="pay-and-feed__counter">02</span>
+                        <div class="pay-and-feed__line"></div>
+                    </div>
+
+                    <div class="pay-and-feed__block pay-and-feed__block-content">
+                        <div class="pay-and-feed__image second"></div>
+
+                        <div class="pay-and-feed__item">
+
+                            <img src="./assets/icons/money.svg" alt="Money" class="pay-and-feed__item-img">
+
+                            <span class="pay-and-feed__item-span">Make a donation</span>
+
+                            <p class="pay-and-feed__item-paragraf">
+                                You can donate through your credit card without any fees. It is
+                                easy and safe. We do not keep donors' personal information
+                                on an online network. Choose an amount to give and the
+                                pet's name if needed. One of the most effective ways you can
+                                give is by making regular donations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pay-and-feed__block pay-and-feed__block-counter">
+                        <span class="pay-and-feed__counter">03</span>
+                        <div class="pay-and-feed__line"></div>
+                    </div>
+
+                    <div class="pay-and-feed__block pay-and-feed__block-content" style="margin-bottom: 0px;">
+                        <div class="pay-and-feed__image third"></div>
+
+                        <div class="pay-and-feed__item">
+
+                            <img src="./assets/icons/feed.svg" alt="Feed" class="pay-and-feed__item-img">
+
+                            <span class="pay-and-feed__item-span">Bring your food charity — straight to<br>
+                                your favorites pets.
+                            </span>
+
+                            <p class="pay-and-feed__item-paragraf">
+                                After your donation, the animal receives its favorite foods.
+                                You can support your favorite animals or any animal you care
+                                about and make a real personal impact. Never doubt that
+                                your donation can make a difference even if it is small.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn_pay-and-feed btn-donate">
+                        donate now
+                        <a href=""></a>
+                        <img src="./assets/icons/arrow.svg" alt="arrow">
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="online-zoo_user-think">
+            <div class="conteiner_size">
+                <div class="user-think__content">
+
+                    <div class="user-think__main">
+                        <h3 class="user-think_title">
+                             what our users think
+                        </h3>
+                         <p class="user-think__description">
+                            We are continuously striving to improve
+                            the experiences of our future guests.
+                            Below you can leave your own feedback,
+                            or simply view feedback from past clients.
+                        </p>
+                    </div>
+
+                    <div class="user-think__reviews-items">
+
+                        <div class="user-think__item" style="order: 0;">
+                            <img src="./assets/icons/zpt.svg" alt="apostraf" class="user-think__item-icon">
+                            <p class="user-think__item-country">
+                                New Jersey, June 2020
+                            </p>
+                            <p class="user-think__item-review">
+                                I am writing to thank you for your mission is
+                                to bring people closer to nature! Like myself,
+                                children were very impressed by the opportunity to explore the
+                                life of incredible animals in real-time.
+                            </p>
+                            <p class="user-think__item-name">
+                                Karen Maithlan
+                            </p>
+                        </div>
+
+                        <div class="user-think__item" style="order: 1;">
+                            <img src="./assets/icons/zpt.svg" alt="apostraf" class="user-think__item-icon">
+                            <p class="user-think__item-country">
+                                Toronto, November 2020
+                            </p>
+                            <p class="user-think__item-review">
+                                We so enjoy the ever-evolving selection of
+                                animals from around the globe. THANK YOU
+                                for sharing these fascinating animal friends
+                                with us so that we may learn and increase our
+                                understanding of the animal kingdom.
+                            </p>
+                            <p class="user-think__item-name">
+                                Carol Larsen
+                            </p>
+
+                        </div>
+
+                        <div class="user-think__item" style="order: 2;">
+                            <img src="./assets/icons/zpt.svg" alt="apostraf" class="user-think__item-icon">
+                            <p class="user-think__item-country">
+                                London, February 2020
+                            </p>
+                            <p class="user-think__item-review">
+                                A fantastic experience for kids and adults
+                                alike! If anyone is looking for an attraction
+                                that educates people on wild animals –
+                                it's for you! I highly recommend seeing for
+                                yourself the variety of animals on your screen.
+                            </p>
+                            <p class="user-think__item-name">
+                                C. Stockman
+                            </p>
+
+                        </div>
+
+                        <div class="user-think__item" style="order: 3;">
+                            <img src="./assets/icons/zpt.svg" alt="apostraf" class="user-think__item-icon">
+                            <p class="user-think__item-country">
+                                Amsterdam, June 2020
+                            </p>
+                            <p class="user-think__item-review">
+                                I want to thank you for the amazing sites you
+                                find to put your cameras to let each of us see
+                                things that we would probably never see on
+                                our own. There are so many positives on Zoo
+                                Online and I'm grateful for it. Thank you so
+                                much!
+                            </p>
+                            <p class="user-think__item-name">
+                                Tomas Ray
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meet-pets__slider_btns users-think-sliders">
+                    <button class="slider_button-user-think back user-think__btn-back">
+                        <!-- <img src="./assets/icons/arrow_back.svg" alt="arrow"> -->
+                    </button>
+                    <button class="slider_button-user-think next user-think__btn-next">
+                        <!-- <img src="./assets/icons/arrow_next.svg" alt="arrow"> -->
+                    </button>
+                </div>
+
+                <button class="meet-pets_btn-choose users-think-btn-choose">
+                    leave feedback
+                    <div class="users-think-btn-choose-arrow"></div>
+                </button>
+
+            </div>
+        </section>
+
+        <section class="onlini-zoo_care-for-the-animals">
+            <div class="conteiner_size">
+                <div class="care-for-the-animal__content">
+                    <h3>
+                        care for the animals you love
+                    </h3>
+
+                    <p class="care-for-the-animal_description">
+                        You can help to look after the animals
+                        you love with your gift today
+                    </p>
+
+                    <div class="care-for-the-animal__items">
+                        <div class="care-for-the-animal__item-img"></div>
+                        <!-- <img src="./assets/images/koala.png" alt="Koala" class="care-for-the-animal__item-img"> -->
+
+                        <a href="./pages/zoos/panda/panda.html">
+                            <div class="care-for-the-animal-item">
+
+                                <img src="./assets/images/panda.png" alt="Panda Lucas" class="care-animal-image">
+
+                                <p class="care-for-the-animal_paragraf">
+                                    Your $30 could give Lucas
+                                    a slice of panda cake, made with our secret
+                                    recipe.
+                                </p>
+
+                                <button class="view_live_cam-btn">
+                                    feed
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </div>
+                        </a>
+
+                        <div class="care-for-the-animal-item">
+
+                            <img src="./assets/images/tigr.png" alt="Tigr Senja" class="care-animal-image">
+
+                            <p class="care-for-the-animal_paragraf">
+                                Your $150 will help to care for Senja,
+                                a Sumatran tiger, for three weeks.
+                            </p>
+
+                            <button class="view_live_cam-btn">
+                                feed
+                                <div class="view_live_cam-btn-img"></div>
+                            </button>
+                        </div>
+
+                        <a href="./pages/zoos/lemurs/lemurs.html">
+                            <div class="care-for-the-animal-item">
+                                <img src="./assets/images/lemur.png" alt="Lemur Andy" class="care-animal-image">
+
+                                <p class="care-for-the-animal_paragraf">
+                                    With your support, we can give Andy his
+                                    favorite fruits. Especially when it's not fruit season
+                                    in its natural habitat.
+                                </p>
+                                <button class="view_live_cam-btn">
+                                    feed
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="./pages/zoos/eagles/eagles.html">
+                            <div class="care-for-the-animal-item">
+
+                                <img src="./assets/images/orel.png" alt="Sam & Lora" class="care-animal-image">
+
+                                <p class="care-for-the-animal_paragraf">
+                                    Sam & Lora have hatched and raised
+                                    numerous young and will be happy with
+                                    your help.
+                                </p>
+                                <button class="view_live_cam-btn">
+                                    feed
+                                    <div class="view_live_cam-btn-img"></div>
+                                </button>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <a href="./pages/map/map.html">
+                        <button class="meet-pets_btn-choose care-animal-_btn-choose">
+                            choose your favourite
+                            <div class="meet-pets_btn-choose-arrow"></div>
+                        </button>
+                    </a>
+
+                    <div class="care-for-the-animal_img-touch"></div>
+
+                    <!-- <img src="./assets/images/Touch_the_animal.png" alt="touch yhe animal online" class="care-for-the-animal_img-touch"> -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer_online-zoo">
+        <div class="conteiner_size">
+            <div class="footer_content">
+                <div class="footer_content_block-1">
+                    <div class="logos-courses">
+                        <a href="./index.html">
+                            <div class="online-zoo_logo">
+                                <img src="./assets/icons/Logo_white.svg" alt="logo_online-zoo">
+                            </div>
+                        </a>
+
+                        <div class="online-zoo_logo" title="Yem Digita">
+                            <img src="./assets/icons/Yem_Digital.svg" alt="logo_yem_digital">
+                        </div>
+
+                        <div class="online-zoo_logo" title="Rolling Scopes School">
+                            <img src="./assets/icons/rs_school_js_logo.svg" alt="logo_RSS">
+                        </div>
+                    </div>
+
+                    <ul class="online-zoo_pages-nav_footer">
+                        <li><a href="#About" class="nav-link">about</a></li>
+                        <li><a href="../online-zoo/pages/map/map.html" class="nav-link">map</a></li>
+                        <li><a href="./pages/zoos/panda/panda.html" class="nav-link">zoos</a></li>
+                        <li><a href="../online-zoo/pages/contactus/contuctus.html" class="nav-link">contact us</a></li>
+                    </ul>
+
+                    <button class="online-zoo_button btn-donate">
+                        Donate for volunteers
+                        <img src="./assets/icons/arrow_next.svg" alt="arrow" class="meet-pets_btn-choose-arrow">
+                    </button>
+
+                </div>
+
+                <div class="footer_content_block-2">
+                    <ul class="footer_link_creator">
+                        <li>© 2021 DinaK </li>
+                        <li>© Yem Digital </li>
+                        <li>© RSSchool</li>
+                    </ul>
+
+                    <ul class="online-zoo_social-nav">
+                        <li  class="icons_social"><a href="https://www.youtube.com/" class="youtube" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://www.instagram.com/" class="instagram" target="_blank"></a></li>
+                        <li class="icons_social"><a href="https://ru-ru.facebook.com/" class="facebook" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
